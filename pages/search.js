@@ -31,7 +31,7 @@ const Search = ({ properties }) => {
             </Flex>
             {searchFilters && <SearchFilters />}
             <Text fontSize="2xl" p="4" fontWeight="bold">
-                Properties {router.query.purpose}
+                Properties {router.query.purpose.replace('-', ' ')}
             </Text>
             <Flex flexWrap="wrap">
                 {properties.map((property) => <Property property={property} />)}
