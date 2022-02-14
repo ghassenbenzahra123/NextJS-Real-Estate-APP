@@ -34,7 +34,7 @@ const Search = ({ properties }) => {
                 Properties {router.query.purpose.replace('-', ' ')}
             </Text>
             <Flex flexWrap="wrap">
-                {properties.map((property) => <Property property={property} />)}
+                {properties.map((property) => <Property property={property} key={property.id} />)}
             </Flex>
             {properties.length === 0 && (
                 <Flex justifyContent='center' alignItems='center' flexDirection="column" marginTop="5" marginBottom="5">
